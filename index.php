@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * THIS WOULD BE A GOOD OPPORTUNITY TO USE VUE.JS TO RECREATE THIS(https://www.carmax.com/car-financing/car-payment-calculator?vehiclePrice=24998) INTERACVTIVE CALCULATOR
  *
  **/
 ?>
