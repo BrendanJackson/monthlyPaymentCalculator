@@ -118,7 +118,7 @@ class MonthlyPaymentCalculator
      * @return mixed This is a description about the return
      */
     public function getMonthlyPayment(){
-        $this->monthlyPayment = round( $this->principal * ($this->interestPerMonth * (1 + $this->interestPerMonth)**$this->totalMonths) /((1 + $this->interestPerMonth)**$this->totalMonths - 1), 2 );
+        $this->monthlyPayment = round( ($this->principal - $this->downPayment) * ($this->interestPerMonth * (1 + $this->interestPerMonth)**$this->totalMonths) /((1 + $this->interestPerMonth)**$this->totalMonths - 1), 2 );
         return $this-> monthlyPayment;
 
     }
@@ -127,9 +127,11 @@ class MonthlyPaymentCalculator
      * @param $monthlyPayment
      * @return $monthlyPaymentMinusDownPayment
      */
+
+    /*
     public function getMonthlyPaymentMinusDownPayment($monthlyPayment){
         $this->monthlyPaymentMinusDownPayment = $monthlyPayment - $this->downPayment;
         return $this->monthlyPaymentMinusDownPayment;
     }
-
+    */
 }

@@ -49,12 +49,14 @@ $calulate-> totalMonths = 24;
 $calulate-> getInterestPerMonth();//breaks after this
 
 $calulate->downPayment = 1000;
-$calulate-> getMonthlyPaymentMinusDownPayment();
 
+$calulate-> getMonthlyPayment();
+echo "<h1>Monthly Payment:" . $calulate->monthlyPayment . "</h1>";
+echo "<h1>Down Payment:" . $calulate->downPayment . "</h1>";
 
 ?>
 
-<h1 style="color:red;">needs monthly payment</h1>
+
 <form action="POST">
     <p>Monthly Payment</p> <!-- monthlyPayment -->
     <input class="textBoxToFilter" type="number">
@@ -64,7 +66,7 @@ $calulate-> getMonthlyPaymentMinusDownPayment();
     <input class="textBoxToFilter" type="number">
 </form>
 
-<h1><?=$calulate->getMonthlyPaymentMinusDownPayment();?></h1>
+<h1><?=$calulate->getMonthlyPayment();?></h1>
 
 </body>
 </html>
